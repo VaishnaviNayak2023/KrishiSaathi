@@ -1,0 +1,69 @@
+:root {
+    --primary-green: #4caf50;     /* The main title green */
+    --background-color: #f7f9f7;  /* Off-white background for the page */
+    --card-background: #ffffff;   /* White for the card */
+    --text-muted: #667085;        /* Muted text for the subtitle */
+    --text-dark: #2c3e50;         /* Dark text for the button */
+    --border-color: #e0e0e0;      /* Light border for the button */
+    --light-green-bg: #e8f5e9;    /* Light hover color for the button */
+}
+
+/* ... (Include other common styles) ... */
+
+/* The specific styles for the knowledge center card are included 
+   in the <style> tag within the HTML for immediate visibility and simplicity.
+   If you want them in the external CSS file, move the block below 
+   the :root variables in farm-query-style.css: */
+
+/* Styles to be added to farm-query-style.css if desired */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--background-color);
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.knowledge-card {
+    background-color: var(--card-background);
+    border-radius: 12px;
+    padding: 40px 60px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0, 0, 0, 0.02);
+    max-width: 450px;
+    transition: box-shadow 0.3s;
+}
+
+.knowledge-card h1 {
+    color: var(--primary-green);
+    font-size: 2.2em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.knowledge-card p {
+    color: var(--text-muted);
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+.back-btn {
+    background: none;
+    color: var(--text-dark);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.back-btn:hover {
+    background-color: var(--light-green-bg);
+    border-color: var(--primary-green);
+    color: var(--primary-green);
+}

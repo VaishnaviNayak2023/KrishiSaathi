@@ -1,0 +1,161 @@
+:root {
+    --primary-green: #4caf50;     /* Vibrant green for titles/success */
+    --primary-dark-green: #388e3c; /* Darker green for header/accents */
+    --medium-green: #6ab04c;      /* Border/Dashed Line Green */
+    --light-green-bg: #e8f5e9;    /* Light green background for body */
+    --card-background: #ffffff;   /* White for the card */
+    --text-dark: #2c3e50;         /* Dark text */
+    --text-muted: #667085;        /* Muted text/labels */
+    --border-color: #e0e0e0;      /* Light border */
+    --accent-yellow: #d1b87a;     /* Scan button color */
+    --accent-yellow-hover: #c4a96b;
+    --success-border: #6ab04c;    /* Dashed border green */
+    --success-bg: #f4fff4;        /* Very light green for success box background */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--light-green-bg);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--text-dark);
+}
+
+.page-center-wrapper {
+    text-align: center;
+    max-width: 550px;
+    width: 90%;
+}
+
+/* Header Styling */
+.scan-header {
+    margin-bottom: 25px;
+}
+
+.main-title {
+    color: var(--primary-dark-green);
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.main-title i {
+    margin-right: 8px;
+    color: var(--primary-green);
+}
+
+.subtitle {
+    color: var(--text-muted);
+    font-size: 1em;
+}
+
+/* Main Card Styling */
+.scan-card {
+    background-color: var(--card-background);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Upload Success Box */
+.upload-success-box {
+    border: 2px dashed var(--success-border);
+    background-color: var(--success-bg);
+    padding: 30px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.success-icon {
+    color: var(--primary-green);
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.success-message {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin: 5px 0 5px 0;
+}
+
+.file-name {
+    font-size: 0.9em;
+    color: var(--text-muted);
+    margin: 0;
+    word-break: break-all;
+}
+
+.formats-tip {
+    font-size: 0.85em;
+    color: var(--text-muted);
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+/* Horizontal Separator Line */
+.separator {
+    border: none;
+    border-top: 1px solid var(--border-color);
+    margin: 20px 0;
+}
+
+/* Pro Tip Styling */
+.pro-tip {
+    font-size: 0.95em;
+    color: var(--text-dark);
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.pro-tip i {
+    color: var(--accent-yellow);
+    margin-right: 8px;
+}
+
+/* Scan Button Styling */
+.btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, opacity 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.scan-button {
+    background-color: var(--accent-yellow);
+    color: var(--text-dark);
+}
+
+.scan-button:hover {
+    background-color: var(--accent-yellow-hover);
+}
+
+/* Footer Leaf Icon */
+.footer-leaf {
+    color: var(--primary-green);
+    opacity: 0.4;
+    font-size: 1.5em;
+    margin-top: 25px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .scan-card {
+        padding: 20px;
+    }
+    .main-title {
+        font-size: 1.6em;
+    }
+    .upload-success-box {
+        padding: 20px 10px;
+    }
+}

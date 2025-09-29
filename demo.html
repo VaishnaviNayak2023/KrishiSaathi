@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <form onsubmit="return confirmSubmit()">
+        Name: <input type="text" name="name" required><br><br>
+        Email: <input type="email" name="email" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+    function confirmSubmit() {
+        return confirm("Do you really want to submit the form?");
+    }
+    </script>
+</body>
+</html>

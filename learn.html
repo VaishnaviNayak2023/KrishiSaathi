@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge Center</title>
+    <link rel="stylesheet" href="learn.css">
+    <style>
+        /* This internal style is just for this specific page layout, 
+           as it differs significantly from the full chat UI layout. 
+           It keeps the page self-contained for easy viewing. */
+        
+        /* Centering and background */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: var(--background-color);
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* The main white card container */
+        .knowledge-card {
+            background-color: var(--card-background);
+            border-radius: 12px;
+            padding: 40px 60px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0, 0, 0, 0.02);
+            max-width: 450px;
+            transition: box-shadow 0.3s;
+        }
+        
+        .knowledge-card:hover {
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Title style */
+        .knowledge-card h1 {
+            color: var(--primary-green);
+            font-size: 2.2em;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        /* Subtitle style */
+        .knowledge-card p {
+            color: var(--text-muted);
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
+
+        /* Dashboard Button style */
+        .back-btn {
+            background: none;
+            color: var(--text-dark);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none; /* In case it's an <a> tag */
+            display: inline-block;
+        }
+
+        .back-btn:hover {
+            background-color: var(--light-green-bg);
+            border-color: var(--primary-green);
+            color: var(--primary-green);
+        }
+    </style>
+</head>
+<body>
+    <div class="knowledge-card">
+        <h1>Knowledge Center</h1>
+        <p>Video tutorials and farming guides coming soon!</p>
+        
+        <a href="home.html" class="back-btn" id="back-to-dashboard-btn">
+            Back to Home
+        </a>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

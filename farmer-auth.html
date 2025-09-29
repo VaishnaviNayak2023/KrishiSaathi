@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Login / Sign Up</title>
+    <link rel="stylesheet" href="farmer-auth-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <div class="auth-wrapper login-active" id="auth-wrapper"> 
+        <h1 class="main-title">Farmer Access</h1>
+        <p class="subtitle">Securely manage your Agri Nova account.</p>
+
+        <div class="auth-container">
+            
+            <div class="auth-card login-card" id="login-card">
+                <h2 class="card-title">Login to Agri Nova</h2>
+                <form id="login-form">
+                    <div class="input-group">
+                        <label for="login-email"><i class="fas fa-envelope"></i> Email or Phone</label>
+                        <input type="text" id="login-email" required placeholder="example@agrinova.in">
+                    </div>
+                    <div class="input-group">
+                        <label for="login-password"><i class="fas fa-lock"></i> Password</label>
+                        <input type="password" id="login-password" required placeholder="Enter your password">
+                    </div>
+                    
+                    <a href="forgot-password.html" class="forgot-password">Forgot Password?</a>
+
+                    <button type="submit" class="submit-btn login-btn-primary">
+                        Login
+                    </button>
+                </form>
+
+                <p class="switch-text">
+                    Don't have an account? 
+                    <a href="home.html" id="switch-to-signup" class="switch-link">Sign Up</a>
+                </p>
+            </div>
+
+            <div class="auth-card signup-card" id="signup-card">
+                <h2 class="card-title">Create a Farmer Account</h2>
+                <form id="signup-form">
+                    <div class="input-group">
+                        <label for="signup-name"><i class="fas fa-user"></i> Full Name</label>
+                        <input type="text" id="signup-name" required placeholder="Ramesh Kumar">
+                    </div>
+                    <div class="input-group">
+                        <label for="signup-phone"><i class="fas fa-phone"></i> Phone Number</label>
+                        <input type="tel" id="signup-phone" required placeholder="+91 98765 43210">
+                    </div>
+                    <div class="input-group">
+                        <label for="signup-password"><i class="fas fa-lock"></i> Create Password</label>
+                        <input type="password" id="signup-password" required placeholder="Minimum 6 characters">
+                    </div>
+                    
+                    <button type="submit" class="submit-btn signup-btn-primary">
+                        Sign Up
+                    </button>
+                </form>
+
+                <p class="switch-text">
+                    Already have an account? 
+                    <a href="home.html" id="switch-to-login" class="switch-link">Login</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="farmer-auth-script.js"></script>
+</body>
+</html>

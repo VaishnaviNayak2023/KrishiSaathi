@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agri Officer Dashboard</title>
+    <link rel="stylesheet" href="officer-dashboard-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="dashboard-header">
+        <div class="logo">Agri Nova</div>
+        <div class="header-actions">
+            <span class="language-select">A മലയാളം</span>
+            <button class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</button>
+        </div>
+    </header>
+
+    <div class="dashboard-container">
+        <div class="intro-text">
+            Monitor farmer queries and provide expert assistance
+        </div>
+
+        <div class="stats-summary">
+            <div class="stat-card total-queries">
+                <i class="fas fa-comment-dots"></i>
+                <div class="stat-details">
+                    <span class="stat-value">1247</span>
+                    <span class="stat-label">Total Queries</span>
+                </div>
+                <i class="fas fa-chart-line trend-icon"></i>
+            </div>
+            
+            <div class="stat-card resolved-today">
+                <i class="fas fa-check-circle"></i>
+                <div class="stat-details">
+                    <span class="stat-value">89</span>
+                    <span class="stat-label">Resolved Today</span>
+                </div>
+            </div>
+            
+            <div class="stat-card pending">
+                <i class="fas fa-hourglass-half"></i>
+                <div class="stat-details">
+                    <span class="stat-value">23</span>
+                    <span class="stat-label">Pending</span>
+                </div>
+            </div>
+            
+            <div class="stat-card satisfaction">
+                <i class="fas fa-smile"></i>
+                <div class="stat-details">
+                    <span class="stat-value">94%</span>
+                    <span class="stat-label">Satisfaction</span>
+                </div>
+                <i class="fas fa-chart-line trend-icon"></i>
+            </div>
+        </div>
+
+        <div class="dashboard-main-grid">
+            
+            <div class="card queries-card">
+                <h2 class="card-title"><i class="fas fa-exclamation-triangle"></i> Escalated Queries</h2>
+                
+                <div class="query-item">
+                    <div class="query-header">
+                        <div class="priority-tags">
+                            <span class="tag high-priority">High Priority</span>
+                            <span class="tag low-confidence">Low Confidence</span>
+                        </div>
+                        <span class="time-ago">2 hrs ago</span>
+                    </div>
+                    <p class="farmer-info">
+                        **Rajesh Kumar**
+                        <span class="location">Palakkad • Rice</span>
+                    </p>
+                    <p class="query-text">Brown spots on rice leaves after heavy rain</p>
+                    <div class="query-actions">
+                        <button class="btn chat-btn"><i class="fas fa-comment"></i> Chat</button>
+                        <button class="btn call-btn"><i class="fas fa-phone"></i> Call</button>
+                        <button class="btn resolve-btn"><i class="fas fa-check"></i> Resolve</button>
+                    </div>
+                </div>
+                
+                <div class="query-item">
+                    <div class="query-header">
+                        <div class="priority-tags">
+                            <span class="tag medium-priority">Medium Priority</span>
+                            <span class="tag medium-confidence">Medium Confidence</span>
+                        </div>
+                        <span class="time-ago">4 hrs ago</span>
+                    </div>
+                    <p class="farmer-info">
+                        **Priya Nair**
+                        <span class="location">Idukki • Pepper</span>
+                    </p>
+                    <p class="query-text">White powdery substance on pepper plants</p>
+                    <div class="query-actions">
+                        <button class="btn chat-btn"><i class="fas fa-comment"></i> Chat</button>
+                        <button class="btn call-btn"><i class="fas fa-phone"></i> Call</button>
+                        <button class="btn resolve-btn"><i class="fas fa-check"></i> Resolve</button>
+                    </div>
+                </div>
+
+                <div class="query-item">
+                    <div class="query-header">
+                        <div class="priority-tags">
+                            <span class="tag low-priority">Low Priority</span>
+                            <span class="tag low-confidence">Low Confidence</span>
+                        </div>
+                        <span class="time-ago">6 hrs ago</span>
+                    </div>
+                    <p class="farmer-info">
+                        **Suresh Pillai**
+                        <span class="location">Thiruvananthapuram • Coconut</span>
+                    </p>
+                    <p class="query-text">Coconut trees not flowering properly</p>
+                    <div class="query-actions">
+                        <button class="btn chat-btn"><i class="fas fa-comment"></i> Chat</button>
+                        <button class="btn call-btn disabled-call"><i class="fas fa-phone"></i> Call</button>
+                        <button class="btn resolve-btn"><i class="fas fa-check"></i> Resolve</button>
+                    </div>
+                </div>
+                
+                <div class="view-all">
+                    <a href="#">View All Queries</a>
+                </div>
+            </div>
+
+            <div class="right-column">
+                
+                <div class="card trending-card">
+                    <h2 class="card-title">Trending Issues</h2>
+                    <ul class="trending-list">
+                        <li>
+                            <span class="issue-name">Blast Disease</span>
+                            <span class="issue-count">45</span>
+                            <span class="issue-change up">+12%</span>
+                        </li>
+                        <li>
+                            <span class="issue-name">Leaf Blight</span>
+                            <span class="issue-count">38</span>
+                            <span class="issue-change down">-8%</span>
+                        </li>
+                        <li>
+                            <span class="issue-name">Powdery Mildew</span>
+                            <span class="issue-count">32</span>
+                            <span class="issue-change up">+5%</span>
+                        </li>
+                        <li>
+                            <span class="issue-name">Root Rot</span>
+                            <span class="issue-count">28</span>
+                            <span class="issue-change up">+15%</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card quick-actions-card">
+                    <h2 class="card-title">Quick Actions</h2>
+                    <button class="btn action-send-alert"><i class="fas fa-cloud-sun-rain"></i> Send Weather Alert</button>
+                    <button class="btn action-broadcast"><i class="fas fa-bullhorn"></i> Broadcast Advisory</button>
+                    <button class="btn action-generate-report"><i class="fas fa-file-alt"></i> Generate Report</button>
+                </div>
+
+                <div class="card performance-card">
+                    <h2 class="card-title">Performance</h2>
+                    <div class="performance-metric">
+                        <span class="metric-label">Avg Response Time</span>
+                        <span class="metric-value green">12 min</span>
+                    </div>
+                    <div class="performance-metric">
+                        <span class="metric-label">Resolution Rate</span>
+                        <span class="metric-value green">87%</span>
+                    </div>
+                    <div class="performance-metric">
+                        <span class="metric-label">Farmers Helped</span>
+                        <span class="metric-value green">892</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="officer-dasboard.js"></script>
+</body>
+</html>

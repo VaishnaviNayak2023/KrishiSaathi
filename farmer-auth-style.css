@@ -1,0 +1,181 @@
+/* --- Variables --- */
+:root {
+    --primary-green: #38761D;
+    --button-green: #4CAF50; 
+    --text-dark: #333333;
+    --text-subtle: #666666;
+    --background-color: #F0FBF0;
+    --card-bg: #FFFFFF;
+    --card-border: #C8E6C9; 
+    --font-family: 'Arial', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* --- Wrapper and Titles --- */
+.auth-wrapper {
+    max-width: 450px;
+    width: 90%;
+    text-align: center;
+    padding: 20px;
+}
+
+.main-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-green);
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: var(--text-subtle);
+    margin-bottom: 30px;
+}
+
+/* --- Auth Container (The Swapping Area) --- */
+.auth-container {
+    position: relative;
+    /* This height must be set to the largest card height for a fluid swap */
+    height: 520px; 
+    overflow: hidden; 
+}
+
+.auth-card {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid var(--card-border);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    /* Apply transition to the card itself */
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+/* --- Animation Classes (Controlled by JS on .auth-wrapper) --- */
+
+.login-card {
+    transform: translateX(0%); /* Default starting position (Login active) */
+    opacity: 1;
+}
+
+.signup-card {
+    transform: translateX(100%); /* Sign-up starts off-screen right */
+    opacity: 0;
+}
+
+/* When the .auth-wrapper has the .signup-active class: */
+.auth-wrapper.signup-active .login-card {
+    transform: translateX(-100%); /* Push login card off-screen left */
+    opacity: 0;
+}
+
+.auth-wrapper.signup-active .signup-card {
+    transform: translateX(0%); /* Bring signup card into view */
+    opacity: 1;
+}
+
+/* --- Card Content Styling (No Change) --- */
+.card-title {
+    font-size: 1.5rem;
+    color: var(--primary-green);
+    margin-bottom: 25px;
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--text-dark);
+    margin-bottom: 5px;
+}
+
+.input-group i {
+    margin-right: 8px;
+    color: var(--button-green);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: var(--font-family);
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: var(--primary-green);
+    box-shadow: 0 0 5px rgba(56, 118, 29, 0.2);
+}
+
+.forgot-password {
+    display: block;
+    text-align: right;
+    font-size: 0.9rem;
+    color: var(--text-subtle);
+    margin-bottom: 25px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.forgot-password:hover, .switch-link:hover {
+    color: var(--primary-green);
+    text-decoration: underline;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    background-color: var(--button-green);
+    transition: background-color 0.3s, transform 0.1s;
+    margin-bottom: 20px;
+}
+
+.submit-btn:hover {
+    background-color: var(--primary-green);
+    transform: translateY(-1px);
+}
+
+.switch-text {
+    font-size: 0.9rem;
+    color: var(--text-subtle);
+    margin-top: 15px;
+}
+
+.switch-link {
+    color: var(--button-green);
+    font-weight: bold;
+    text-decoration: none;
+}
